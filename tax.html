@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tax Calculator</title>
+    <link rel="stylesheet" href="style7.css">
+</head>
+<body>
+    <div class="container">
+        <h1></h1>
+        <form id="taxForm">
+            
+            <div class="form-group">
+                <label for="income"> Enter gross annual income (in Lakhs):</label>
+                <input type="number" id="income" class="form-control" inputmode="numeric">
+                <div class="error-icon"></div>
+            </div>
+
+            <div class="form-group">
+                <label for="extraincome">Enter extra income (in Lakhs):</label>
+                <input type="number" id="extraIncomeError" class="form-control" inputmode="numeric">
+                <div class="error-icon"></div>
+            </div>
+
+            <div class="form-group">
+                <label for="age">Enter age group:</label>
+                <select id="age" class="form-control">
+                    <option value="<40">&lt; 40</option>
+                    <option value="≥40 & <60">&ge; 40 &lt; 60</option>
+                    <option value="≥60">&ge; 60</option>
+                </select>
+                <div class="error-icon"></div>
+            </div>
+
+            <div class="form-group">
+                <label for="deductions">Enter total applicable deductions (in Lakhs):</label>
+                <input type="number" id="deductions" class="form-control" inputmode="numeric">
+                <div class="error-icon"></div>
+            </div>
+            <button type="submit" class="btn">Submit</button>
+        </form>
+    </div>
+
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h1>Your overall income will be</h1>
+            <p id="resultIncome"></p>
+            <h4>After tax deduction</h4>
+            <p id="result"></p>
+        </div>
+    </div>
+
+    <script src="script7.js"></script>
+</body>
+</html>
